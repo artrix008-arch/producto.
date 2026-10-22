@@ -1,0 +1,28 @@
+@font-face{font-family:'Adit';src:url('/fonts/khmer/Adit1.0.8-Condensed.otf') format('opentype');font-weight:100 400;font-style:normal;font-display:swap}
+@font-face{font-family:'Adit';src:url('/fonts/khmer/Adit1.0.8-SemiCondensed.otf') format('opentype');font-weight:500 600;font-style:normal;font-display:swap}
+@font-face{font-family:'Adit';src:url('/fonts/khmer/Adit1.0.8-Bold.otf') format('opentype');font-weight:700 900;font-style:normal;font-display:swap}
+@font-face{font-family:'Adit';src:url('/fonts/khmer/Adit1.0.8-CondensedSlant.otf') format('opentype');font-weight:100 400;font-style:italic;font-display:swap}
+@font-face{font-family:'Adit';src:url('/fonts/khmer/Adit1.0.8-SemiCondensedSlant.otf') format('opentype');font-weight:500 600;font-style:italic;font-display:swap}
+@font-face{font-family:'Adit';src:url('/fonts/khmer/Adit1.0.8-BoldSlant.otf') format('opentype');font-weight:700 900;font-style:italic;font-display:swap}
+@font-face{font-family:'Adit SemiCondensed';src:url('/fonts/khmer/Adit1.0.8-SemiCondensed.otf') format('opentype');font-style:normal;font-display:swap}
+@font-face{font-family:'Adit SemiCondensed';src:url('/fonts/khmer/Adit1.0.8-SemiCondensedSlant.otf') format('opentype');font-style:italic;font-display:swap}
+@font-face{font-family:'Adit Bold';src:url('/fonts/khmer/Adit1.0.8-Bold.otf') format('opentype');font-style:normal;font-display:swap}
+@font-face{font-family:'Adit Bold';src:url('/fonts/khmer/Adit1.0.8-BoldSlant.otf') format('opentype');font-style:italic;font-display:swap}
+html body[data-skin][data-size][data-theme][data-mode] :is(.f-adit,.f-adit-semi,.f-adit-bold){font-family:var(--adit-face,'Adit'),'Noto Sans Khmer',sans-serif!important;line-height:1.8!important;letter-spacing:0!important}
+.f-adit-semi{--adit-face:'Adit SemiCondensed'}.f-adit-bold{--adit-face:'Adit Bold'}
+/* Keep Khmer stacks together and leave room for marks above and below a line. */
+html body.km[data-skin][data-size][data-theme][data-mode] .h-secondary .music-wrap>#musicBtn::after{content:'តន្ត្រី'}
+html body.km[data-skin][data-size][data-theme][data-mode] .h-secondary>#setBtn::after{content:'ការកំណត់'}
+html body.km[data-skin="pixel-night"] #coinBal::after{content:' កាក់';letter-spacing:0}
+html body.km[data-skin][data-size][data-theme][data-mode]{--line-caption:1.75em;--line-body:1.85em;--line-title:1.8em;--line-section:1.75em;--line-screen:1.65em;line-height:1.8!important}
+html body.km[data-skin][data-size][data-theme][data-mode] :is(button,summary,label,input,textarea,select,.hint,.p-lab,.c-lab,.badge,.greet-date,.dock-name,.ttl,.dsc,.nttl,.hname,h1,h2,h3,h4){letter-spacing:0!important;text-transform:none!important;line-height:1.8!important;word-break:normal;overflow-wrap:break-word}
+html body.km[data-skin][data-size][data-theme][data-mode] :is(button,summary,.toggle,.seg,.stab){height:auto;white-space:normal}
+html body.km[data-skin][data-size][data-theme][data-mode] :is(.sec-h,.sheet-h,.greet-line){min-width:0;align-items:center}
+html body.km[data-skin][data-size][data-theme][data-mode] :is(.sec-h h2,.sheet-h h2){min-width:0;overflow:visible}
+html body.km[data-skin][data-size][data-theme][data-mode] :is(#greetHi,#greetSub,.credit,.sec-h>h2){background:transparent!important}
+html body.km[data-skin][data-size][data-theme][data-mode] #bottomNav .bt{padding-block:8px!important;min-height:54px!important}
+html body.km[data-skin][data-size][data-theme][data-mode] #bottomNav .dock-name{overflow-wrap:normal}
+html body.km[data-skin][data-size][data-theme][data-mode] .brand{font-family:'Silkscreen',monospace!important;white-space:nowrap;line-height:1.4!important}
+html body.km[data-skin="pixel-night"] :is(.ttl,.dsc,.n-title,.nbody,#eBody,#eTitle,input,textarea,select){font-family:var(--ui)!important}
+html body.km[data-skin][data-size][data-theme][data-mode] #calGrid .cxhol-full{font-size:11px!important;line-height:1.65!important;letter-spacing:0!important}
+@media(max-width:620px){html body.km[data-skin][data-size][data-theme][data-mode] #calGrid .cxhol-full{font-size:9px!important}html body.km[data-skin][data-size][data-theme][data-mode] #scopeRow{gap:4px}html body.km[data-skin][data-size][data-theme][data-mode] #scopeRow>.seg{padding-inline:5px!important}html body.km[data-skin][data-size][data-theme][data-mode] #bottomNav .bt{gap:1px!important}}

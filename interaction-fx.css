@@ -1,0 +1,33 @@
+/* Tactile interaction feedback: scale and lift, without shine overlays. */
+#interactionFx{display:block!important;position:fixed;inset:0;pointer-events:none;z-index:9999;overflow:hidden;contain:strict}
+.pixel-finishing{pointer-events:none}
+body #interactionFx .pixel-quest-complete{position:fixed;display:flex;align-items:center;justify-content:center;gap:14px;overflow:hidden;box-sizing:border-box;background:var(--surf,#172a35);color:var(--ink,#f3f7f9);border:2px solid var(--acc,#b9db80);box-shadow:inset 0 0 0 3px var(--surf),inset 0 0 0 4px var(--acc);pointer-events:none;font-family:var(--nav-font,var(--ui));clip-path:polygon(6px 0,calc(100% - 6px) 0,calc(100% - 6px) 3px,100% 3px,100% calc(100% - 3px),calc(100% - 6px) calc(100% - 3px),calc(100% - 6px) 100%,6px 100%,6px calc(100% - 3px),0 calc(100% - 3px),0 3px,6px 3px)}
+body #interactionFx .pixel-quest-seal{display:grid;place-items:center;flex:none;width:38px;height:38px;font-size:28px!important;line-height:1!important;color:var(--on-acc,#14231a);background:var(--acc,#b9db80);box-shadow:4px 4px 0 var(--line);font-family:monospace}
+body #interactionFx .pixel-quest-message{display:flex;flex-direction:column;gap:4px;min-width:0;text-align:left;z-index:1}
+body #interactionFx .pixel-quest-message b{font-size:clamp(12px,1rem,22px)!important;line-height:1.4!important;letter-spacing:.06em}
+body #interactionFx .pixel-quest-message small{font-size:clamp(10px,.75rem,16px)!important;line-height:1.4!important;letter-spacing:.08em;color:var(--muted-ink,var(--ink))}
+body #interactionFx .pixel-quest-scan{position:absolute;top:0;bottom:0;width:12%;background:var(--acc);opacity:.3;transform:skewX(-12deg)}
+body:is([data-skin="pixel"],[data-skin="pixel-night"],[data-skin="neo-arcade"],[data-skin="terminal"]) #interactionFx{display:block!important;position:fixed;inset:0;pointer-events:none;z-index:9999;overflow:hidden;contain:strict}
+@media(hover:hover) and (pointer:fine){
+  html body[data-skin][data-size][data-theme] :is(button:not(:disabled),a[href],.ncard){transition:scale 160ms ease,background-color 160ms ease,border-color 160ms ease,color 160ms ease}
+  html body[data-skin][data-size][data-theme] :is(button:not(:disabled),a[href]):hover{box-shadow:none!important;filter:none!important}
+  html body[data-skin][data-size][data-theme][data-motion-enabled="true"]:not(.saver) :is(button:not(:disabled),a[href]):hover{scale:1.025}
+  html body[data-skin][data-size][data-theme][data-motion-enabled="true"]:not(.saver) :is(button:not(:disabled),a[href]):active{scale:.97}
+}
+@media(prefers-reduced-motion:reduce){
+  html body[data-skin][data-size][data-theme] :is(button,a[href]):is(:hover,:active){scale:none!important}
+}
+
+.pixel-finish-demo{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:18px}
+.pixel-finish-sample{position:relative;display:flex;align-items:center;gap:14px;flex:1 0 100%;min-width:0;min-height:92px;padding:20px;box-sizing:border-box;background:var(--surf2);color:var(--ink);border:1px solid var(--line);font-family:var(--quest-font,var(--ui));overflow:hidden}
+.pixel-preview-check{display:grid;place-items:center;width:36px;height:36px;flex:none;border:1px solid var(--acc);color:var(--acc);font-family:monospace;font-size:24px}
+.pixel-finish-demo .hint{flex:1;min-width:160px}
+body #interactionFx .pixel-quest-complete[data-effect="sparkle"]{border-width:3px;box-shadow:inset 0 0 0 4px var(--surf),inset 0 0 0 6px var(--acc),0 0 16px var(--acc)}
+
+.brand-char{display:inline-block;white-space:pre}.brand-period{color:var(--acc)}
+.habit-shiny-wipe{position:fixed;overflow:hidden;pointer-events:none;isolation:isolate}
+.habit-shiny-wipe i{position:absolute;inset:-20% auto -20% 0;width:32%;background:linear-gradient(100deg,transparent,#fff9,transparent);transform:skewX(-15deg);pointer-events:none}
+html body[data-skin][data-size][data-theme][data-mode] #charModal{align-items:flex-end;justify-content:center;padding-bottom:calc(90px + env(safe-area-inset-bottom))}
+html body[data-skin][data-size][data-theme][data-mode] #charModal>.sheet{width:min(860px,calc(100vw - 24px));margin:0 auto;max-height:76dvh!important;overflow-y:auto;transform:translateY(140px);opacity:0;transition:transform .55s cubic-bezier(0,.55,.45,1),opacity .3s;transition-duration:.55s,.3s!important}
+html body[data-skin][data-size][data-theme][data-mode] #charModal.open>.sheet{transform:translateY(0);opacity:1}
+@media(prefers-reduced-motion:reduce){html body[data-skin][data-size][data-theme][data-mode] #charModal>.sheet{transition:none!important;transform:none!important}}

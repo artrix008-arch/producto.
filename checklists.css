@@ -1,0 +1,15 @@
+html body[data-skin][data-size][data-theme] .ckl{display:grid;grid-template-columns:var(--hit) minmax(0,1fr);align-items:start;gap:var(--space-2);padding-block:var(--space-1);min-width:0;opacity:1!important;text-decoration:none;line-height:var(--line-title)}
+html body[data-skin][data-size][data-theme] .ckl .ck{position:relative;display:inline-block;width:var(--hit);height:var(--hit);min-width:44px;min-height:44px;flex:none;margin:0;padding:0;border:0!important;border-radius:var(--r);background:transparent!important;cursor:pointer;vertical-align:middle;user-select:none;touch-action:manipulation;box-sizing:border-box}
+html body[data-skin][data-size][data-theme] .ckl .ck::before{content:'';position:absolute;inset:50% auto auto 50%;width:20px;height:20px;transform:translate(-50%,-50%);border:2px solid var(--focus-ink,var(--ink));border-radius:3px;background:var(--bg);box-sizing:border-box}
+html body[data-skin][data-size][data-theme] .ckl .ck::after{content:'';position:absolute;display:none;width:6px;height:11px;left:50%;top:50%;border:solid var(--action-ink,var(--ink));border-width:0 2px 2px 0;transform:translate(-50%,-60%) rotate(45deg);background:none;box-shadow:none}
+html body[data-skin][data-size][data-theme] .ckl.on .ck::before{background:var(--acc);border-color:var(--acc)}
+html body[data-skin][data-size][data-theme] .ckl.on .ck::after{display:block}
+html body[data-skin][data-size][data-theme] .ck-text{display:block;min-width:0;min-height:var(--hit);padding-block:var(--space-2);overflow-wrap:anywhere;white-space:pre-wrap;box-sizing:border-box}
+html body[data-skin][data-size][data-theme] .ckl.on>.ck-text{color:var(--muted-ink,var(--ink));text-decoration:line-through;text-decoration-color:currentColor;opacity:1}
+html body[data-skin][data-size][data-theme] .ck:focus-visible{outline:2px solid var(--focus-ink);outline-offset:2px}
+html body[data-skin][data-size][data-theme] .dsc:has(.ckl){-webkit-line-clamp:unset;max-height:none;display:block}
+html body[data-skin][data-size][data-theme] .dsc .ckl:nth-of-type(n+5){display:none}
+html body[data-skin][data-size][data-theme] .qv-desc .ckl{display:grid!important}
+html body[data-skin][data-size][data-theme] :is(.cp-kicker,.cp-time,.cp-tick,.cp-more,.cp-empty,.cp-dismiss-hint,.checkpoint-tasks small,.cp-score span){font-size:var(--type-caption)!important;line-height:var(--line-caption)!important}
+html body[data-skin][data-size][data-theme] .cp-score{font-size:var(--type-screen)!important;line-height:var(--line-screen)!important}
+html body[data-skin][data-size][data-theme] .checkpoint-tasks li>span:last-child{font-size:var(--type-title)!important;line-height:var(--line-title)!important}

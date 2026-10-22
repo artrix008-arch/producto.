@@ -1,0 +1,114 @@
+/* Pixel Night. Every selector is scoped: loading this file never restyles another theme. */
+html body[data-skin="pixel-night"]{
+  color-scheme:dark;
+  --pn-void:#05040B;--pn-indigo:#0F0B22;--pn-nebula:#382C50;
+  --pn-navy:#0A1129;--pn-mid:#132C58;--pn-band:#19244B;
+  --pn-orange:#FF9A1F;--pn-core:#FFD36B;--pn-violet:#A66CFF;
+  --pn-secondary:#727FBC;--pn-ice:#8FD0FF;--pn-moon:#F2E8B8;--pn-teal:#2DE0B0;
+  --bg:var(--pn-void);--ink:var(--pn-moon);--ink-rgb:242,232,184;
+  --surf:var(--pn-indigo);--surf2:var(--pn-navy);
+  --on-acc:var(--action-ink,var(--pn-void));
+  --line:var(--pn-secondary);--muted:var(--pn-ice);--secondary:var(--pn-violet);
+  --success:var(--pn-teal);--warning:var(--pn-core);--danger:#FF859E;
+  --empty-ink:var(--muted);--panel-shadow:0 0 18px #A66CFF26;
+  --r:0px;--ease:cubic-bezier(.45,0,.15,1);--spring:cubic-bezier(.25,1.25,.45,1);
+  --pn-font:'Pixelify Sans','Noto Sans Khmer',monospace;
+  --pn-body:'Inter','Noto Sans Khmer',system-ui,sans-serif;
+  --ui:var(--pn-body);--disp:var(--pn-font);
+  background:var(--bg);color:var(--ink);
+}
+
+/* The effective skin is Pixel Night; the user's saved skin remains untouched. */
+html body[data-skin="pixel-night"] *,
+html body[data-skin="pixel-night"] *::before,
+html body[data-skin="pixel-night"] *::after{border-radius:0!important}
+html body[data-skin="pixel-night"]{cursor:auto!important}
+html body[data-skin="pixel-night"] *{cursor:auto!important}
+html body[data-skin="pixel-night"] :is(button,a,[role="button"]){cursor:pointer!important}
+html body[data-skin="pixel-night"] :is(input,textarea,[contenteditable="true"]){cursor:text!important}
+html body[data-skin="pixel-night"] :is(#scene,#sky,#bgfx,#themefx,#grain,#scan,#naBot,#naCup,.sun,.wm){display:none!important}
+html body[data-skin="pixel-night"]::before,
+html body[data-skin="pixel-night"]::after{display:none!important}
+html body[data-skin="pixel-night"] :is(header,.header,#header,#bottomNav,.bottom-nav){background:var(--pn-void)!important;border-color:var(--line);box-shadow:none!important;backdrop-filter:none}
+html body[data-skin="pixel-night"] :is(.brand,.p-lab,.c-lab,.sec-h,.greet-hi,.sheet-h h2,h1,h2,h3,h4,button,label,.hint,.pomo-mode,.grp-h,.greet-date){font-family:var(--pn-font)!important;text-transform:uppercase;letter-spacing:.055em}
+html body[data-skin="pixel-night"] :is(.ttl,.dsc,.n-title,.nbody,#eBody,#eTitle,input,textarea,select){font-family:var(--pn-body)!important;line-height:1.55;color:var(--ink)!important}
+html body[data-skin="pixel-night"] :is(.greet-hi,.sec-h>h2,.sheet-h h2,.p-lab,.c-lab){background:#05040BD9;padding:7px 8px;color:var(--ink);width:fit-content;max-width:100%}
+html body[data-skin="pixel-night"] :is(.hint,.p-hint,.empty,.tmeta,.ttag,.greet-sub,.greet-date,.save-state,.dsc){color:var(--muted)!important;opacity:1}
+html body[data-skin="pixel-night"] ::placeholder{color:var(--muted);opacity:1}
+html body[data-skin="pixel-night"] :is(.task,.ncard,.sheet,.pop,#editor,.composer,.item,.goal,.ach,.trow,.tcard,.hcard,.habit,.hb-card,.comm,.comm-card,.review-stat,.ch-card){background:var(--surf)!important;color:var(--ink);border:1px solid var(--line)!important;box-shadow:none!important;backdrop-filter:none!important}
+html body[data-skin="pixel-night"] :is(.task,.ncard,.item,.goal,.ach):hover{border-color:var(--pn-teal)!important;box-shadow:0 0 14px #2DE0B01C!important;transform:translateY(-1px)}
+html body[data-skin="pixel-night"] .task{border-left:2px solid var(--rar)!important}
+html body[data-skin="pixel-night"] .task::before,
+html body[data-skin="pixel-night"] .task::after{display:none!important}
+html body[data-skin="pixel-night"] .task.done :is(.ttl,.dsc){opacity:.75}
+html body[data-skin="pixel-night"] :is(.sheet,.pop,#editor){box-shadow:var(--panel-shadow)!important}
+html body[data-skin="pixel-night"] .modal{background:#05040BCC!important;backdrop-filter:none!important}
+html body[data-skin="pixel-night"] :is(button,.btn,.hbt,.ibt,.seg,.tab,.bt,.chip,.fchip,.stab,.vw,.day,.chkopt,.mi,.sw){min-height:calc(44px / var(--z,1));min-width:calc(44px / var(--z,1));color:var(--ink);text-shadow:none;box-shadow:none!important;transition:transform .1s var(--ease),opacity .1s var(--ease)}
+html body[data-skin="pixel-night"] :is(.btn,.hbt,.ibt,.seg,.chip,.fchip,.stab,.vw,.day,.chkopt,.sw,.tab,.bt){background:var(--surf2);border:1px solid var(--line)!important}
+html body[data-skin="pixel-night"] :is(.btn.acc,.seg.on,.chip.on,.fchip.on,.stab.on,.vw.on,.tab.active,.bt.active,.chkopt.on){background:var(--acc)!important;color:var(--on-acc)!important;border-color:var(--acc)!important;box-shadow:0 0 14px #FF9A1F33!important}
+html body[data-skin="pixel-night"] :is(button,.btn,.seg,.chip,.tab,.bt):active{transform:translateY(2px)!important;box-shadow:0 0 12px #2DE0B044!important}
+html body[data-skin="pixel-night"] :is(input:not([type="range"]):not([type="checkbox"]),textarea,select){min-height:44px;background:var(--pn-void)!important;border:1px solid var(--line)!important;box-shadow:none!important}
+html body[data-skin="pixel-night"] input[type="range"]{min-height:44px;accent-color:var(--pn-teal)}
+html body[data-skin="pixel-night"] :focus-visible{outline:2px solid var(--pn-teal)!important;outline-offset:3px}
+html body[data-skin="pixel-night"] .toggle{background:transparent;border:none!important;gap:10px}
+html body[data-skin="pixel-night"] .tsw{background:var(--pn-void)!important;border:1px solid var(--line);box-shadow:none!important;width:44px;height:24px;flex:none}
+html body[data-skin="pixel-night"] .tsw::after{background:var(--muted);box-shadow:none;width:16px;height:16px;left:3px;top:3px}
+html body[data-skin="pixel-night"] .toggle.on .tsw{border-color:var(--pn-teal);background:var(--pn-indigo)!important}
+html body[data-skin="pixel-night"] .toggle.on .tsw::after{background:var(--pn-teal);transform:translateX(20px)}
+html body[data-skin="pixel-night"] #toast{background:var(--pn-indigo)!important;color:var(--ink)!important;border:1px solid var(--pn-teal);box-shadow:0 0 16px #2DE0B022!important;font-family:var(--pn-body);max-width:calc(100vw - 24px)}
+html body[data-skin="pixel-night"] :is(.empty,.ncard.new){background:var(--pn-void)!important;border:1px solid var(--line)!important}
+html body[data-skin="pixel-night"] :is(.lvl-wrap,.coinpill,.clockpill){background:var(--pn-void)!important;border:1px solid var(--line)!important;box-shadow:none!important}
+html body[data-skin="pixel-night"] :is(#coinBal,#lvlBadge,#pomoTime,#shopCoins,#pav){font-family:var(--pn-font)!important;font-variant-numeric:tabular-nums;color:var(--pn-core);font-size:clamp(20px,3vw,28px);line-height:1.25}
+html body[data-skin="pixel-night"] #pomoTime{font-size:clamp(38px,9vw,58px)}
+html body[data-skin="pixel-night"] #coinBal::after{content:' GOLD';display:block;color:var(--pn-orange);font-size:var(--type-caption,.75rem);letter-spacing:.12em}
+html body[data-skin="pixel-night"] #lvlBadge::after{content:' LEVEL';display:block;color:var(--pn-orange);font-size:var(--type-caption,.75rem);letter-spacing:.12em}
+html body[data-skin="pixel-night"] :is(.xp-fill,.pfill){background:var(--pn-teal)!important}
+html body[data-skin="pixel-night"] :is(.xp-bar,.pbar){background:var(--pn-void)!important;border:1px solid var(--line)}
+html body[data-skin="pixel-night"] :is(.tab.active,.bt.active) .cnt{color:var(--on-acc)!important;opacity:1}
+html body[data-skin="pixel-night"] :is(.c-lab,.p-lab,.cm-rr,.pct,.badge.rep,.badge.comm-tag){opacity:1;color:var(--pn-core)!important}
+html body[data-skin="pixel-night"] .pav{background:var(--pn-void)!important;border:1px solid var(--pn-violet)}
+html body[data-skin="pixel-night"] :is(.ttl,.dsc,#eBody){font-size:var(--type-body,.875rem)}
+html body[data-skin="pixel-night"] :is(.seg,.chip,.fchip,.tab,.bt,.btn,.mi,.hbt,.ibt){font-size:var(--type-caption,.75rem)}
+html body[data-skin="pixel-night"] .sw[aria-pressed="true"]{outline:2px solid var(--pn-teal);outline-offset:2px}
+html body[data-skin="pixel-night"] :is(svg.icon,.bi svg,.mic svg){shape-rendering:crispEdges}
+html body[data-skin="pixel-night"] :is(.spinner,.loader,[aria-busy="true"]):not(body)::after{content:'';display:inline-block;width:12px;height:12px;margin:8px;border:2px solid var(--pn-teal);animation:pn-spin .8s steps(4) infinite}
+html body[data-skin="pixel-night"] :is(.modal .sheet,.pop,#editor){transition:transform .48s var(--spring),opacity .44s var(--ease),visibility 0s .48s}
+html body[data-skin="pixel-night"] .modal .sheet{transform:translateY(12px) scale(.97);opacity:0}
+html body[data-skin="pixel-night"] .modal.open .sheet{transform:none;opacity:1}
+html body[data-skin="pixel-night"] .pn-page-in{animation:pn-page .48s var(--ease) both}
+html body[data-skin="pixel-night"] .pn-number-in{animation:pn-number .3s var(--ease)}
+html body[data-skin="pixel-night"] .pn-sprite{display:inline-block;color:var(--pn-teal);font-family:monospace;animation:pn-sprite .75s steps(6) infinite}
+@keyframes pn-page{from{opacity:0;transform:scale(.985)}to{opacity:1;transform:scale(1)}}
+@keyframes pn-number{from{opacity:.3;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+@keyframes pn-spin{to{transform:rotate(360deg)}}
+@keyframes pn-sprite{50%{transform:translateY(-2px)}}
+html body[data-skin="pixel-night"].paused *,
+html body[data-skin="pixel-night"].paused *::before,
+html body[data-skin="pixel-night"].paused *::after{animation-play-state:paused!important}
+@media(prefers-reduced-motion:reduce){
+  html body[data-skin="pixel-night"] *,html body[data-skin="pixel-night"] *::before,html body[data-skin="pixel-night"] *::after{animation:none!important;transition-duration:.01s!important;scroll-behavior:auto!important}
+}
+html body[data-skin="pixel-night"] #pn-background{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none;background:linear-gradient(180deg,#05040B,#0F0B22 35%,#19244B 72%,#0A1129)}
+html body[data-skin="pixel-night"] #pn-background canvas{position:absolute;inset:-16px;width:calc(100% + 32px);height:calc(100% + 32px);image-rendering:pixelated;will-change:transform;opacity:.9}
+html body[data-skin="pixel-night"] #pn-background::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 65% 30%,transparent 10%,#05040B66 75%,#05040BBB);pointer-events:none}
+html body[data-skin="pixel-night"] .pn-odometer-old{position:fixed;z-index:100;pointer-events:none;color:var(--pn-core);font-family:var(--pn-font);font-variant-numeric:tabular-nums;line-height:1.25}
+/* Settings retain their meaning inside the Pixel Night style. */
+html body[data-skin="pixel-night"][data-check="circle"] .check{border-radius:50%!important}
+html body[data-skin="pixel-night"] .dot:not(.brand .dot){border-radius:50%!important}
+html body[data-skin="pixel-night"].has-cursor,html body[data-skin="pixel-night"].has-cursor *{cursor:none!important}
+html body[data-skin="pixel-night"][data-mode="light"]{
+  color-scheme:light;--pn-void:#E9EFF9;--pn-indigo:#F5F7FF;--pn-navy:#DDE7F5;
+  --pn-moon:#1E2948;--pn-ice:#3C5078;--pn-secondary:#8D9DBC;--pn-core:#735219;
+  --pn-orange:#9C4C0C;--pn-teal:#146C59;--pn-violet:#6B409E;
+  --ink-rgb:30,41,72;--danger:#B82B4C;
+}
+html body[data-skin="pixel-night"][data-mode="light"] :is(.greet-hi,.sec-h>h2,.sheet-h h2,.p-lab,.c-lab){background:#F5F7FFE8}
+html body[data-skin="pixel-night"] #pn-background canvas{transition:transform 150ms linear}
+html body[data-skin="pixel-night"][data-motion-enabled="false"] :is(.pn-page-in,.pn-number-in,.pn-sprite){animation:none!important;transition:none!important}
+html body[data-skin="pixel-night"] #installBtn{width:auto!important;display:inline-flex;gap:8px;padding:8px 12px}
+html body[data-skin="pixel-night"] #installBtn .dl-tx{display:inline}
+html body[data-skin="pixel-night"][data-check="circle"] .ckl .ck::before{border-radius:50%!important}
+html body[data-skin="pixel-night"].pn-native-bg #bgfx{display:block!important}
+html body[data-skin="pixel-night"][data-motion-enabled="false"] #bgfx,html body[data-skin="pixel-night"][data-motion-enabled="false"] #bgfx *{animation-play-state:paused!important}
+html body[data-skin="pixel-night"][data-mode="light"] #pn-background::after{background:radial-gradient(ellipse at 65% 30%,transparent 25%,#526FA61A)}
+html body[data-skin="pixel-night"] :is(#cRing,#cDot,#cGlow){border-radius:50%!important}

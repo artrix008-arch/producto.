@@ -1,0 +1,186 @@
+/* Legible labels, a quieter Modern UI, and softer inventory presentation. */
+html body[data-icon-style="emoji"][data-size][data-theme] .emoji-icon{display:inline-flex;align-items:center;justify-content:center;flex:none;vertical-align:middle;line-height:1;font-family:'Apple Color Emoji','Segoe UI Emoji','Noto Color Emoji',sans-serif!important;font-style:normal;font-weight:normal;letter-spacing:0;text-transform:none;pointer-events:none;font-size:22px!important;width:24px;height:24px}
+html body[data-icon-style="emoji"][data-size][data-theme] :is(.ticon,.hicon,.gi,.ai,.ii,.ntype,.shop-ic,.rpg-merchant) .emoji-icon{font-size:28px!important;width:32px;height:32px}
+html body[data-icon-style="emoji"][data-size][data-theme] .shop-icon-preview .emoji-icon{font-size:36px!important;width:44px;height:44px}
+html body[data-icon-style="emoji"][data-size][data-theme] :is(.rpg-companion,.ri) .emoji-icon{font-size:48px!important;width:56px;height:56px}
+html body[data-icon-style="emoji"][data-size][data-theme] .loot-sprite .emoji-icon{font-size:128px!important;width:160px;height:160px}
+.px-icon>.modern-icon{display:none;pointer-events:none}
+html body[data-skin="default"][data-size][data-theme] span.px-icon{width:24px;height:24px;background-image:none!important;image-rendering:auto}
+html body[data-skin="default"][data-size][data-theme] .px-icon>.modern-icon{display:block!important;width:100%!important;height:100%!important;color:inherit;overflow:visible}
+html body[data-skin="default"][data-size][data-theme] :is(.ticon,.hicon,.bi,.ngrp-ic,.ntype,.ii,.ai,.ri,.eqslot) span.px-icon{width:24px!important;height:24px!important}
+html body[data-skin="default"][data-size][data-theme] :is(.icon-picker,.shop-icon-preview,.shop-ic,.rpg-companion,.rpg-empty,.rpg-merchant,.loot-sprite) span.px-icon{background-image:var(--pixel-light)!important;image-rendering:pixelated;width:32px;height:32px}
+html body[data-skin="default"][data-size][data-theme][data-mode="dark"] :is(.icon-picker,.shop-icon-preview,.shop-ic,.rpg-companion,.rpg-empty,.rpg-merchant,.loot-sprite) span.px-icon{background-image:var(--pixel-dark)!important}
+html body[data-skin="default"][data-size][data-theme] :is(.icon-picker,.shop-icon-preview,.shop-ic,.rpg-companion,.rpg-empty,.rpg-merchant,.loot-sprite) .px-icon>.modern-icon{display:none!important}
+html body[data-skin="default"][data-size][data-theme] :is(.icon-picker,.shop-icon-preview) span.px-icon[data-pixel-size="24"]{width:24px;height:24px}
+html body[data-skin="default"][data-size][data-theme] :is(.shop-icon-preview,.shop-ic) span.px-icon[data-pixel-size="48"]{width:96px;height:96px}
+html body[data-skin="default"][data-size][data-theme] .rpg-companion span.px-icon{width:64px;height:64px}
+html body[data-skin="default"][data-size][data-theme] .loot-sprite span.px-icon{width:192px;height:192px}
+html body[data-skin="default"][data-size][data-theme] :is(.hbt,.ibt,.npin,.vw) .px-icon{width:22px;height:22px}
+html body[data-skin="default"][data-size][data-theme] :is(.ncard,.task,.habit){border-radius:14px!important}
+html body[data-skin="default"][data-size][data-theme] .ndel{color:var(--danger)!important}
+html body[data-skin="default"][data-size][data-theme] .nmove{color:var(--readable-ink,var(--ink))!important}
+/* Notes get a single compact toolbar instead of two separate rows of icons. */
+html body[data-skin][data-size][data-theme] .ncard-head{display:flex;align-items:center;justify-content:space-between;gap:12px;position:relative;z-index:1;min-height:44px;margin-bottom:6px}
+html body[data-skin][data-size][data-theme] .ncard-head .ntype{margin:0;position:static!important;opacity:1;align-self:center}
+html body[data-skin][data-size][data-theme] .ncard-head .ncard-acts{display:flex;flex-wrap:nowrap;align-items:center;align-self:center;gap:6px;margin:0!important;position:static!important}
+html body[data-skin][data-size][data-theme] .ncard:not(.type-media){min-height:172px}
+html body[data-skin][data-size][data-theme] .ncard .nttl{padding:0!important;margin-top:0}
+html body[data-skin][data-size][data-theme] .ncard-head .npin{opacity:1!important;position:static!important}
+html body[data-skin][data-size][data-theme] .ncard.pinned [data-act="note-pin"]{background:var(--acc)!important;color:var(--action-ink)!important;border-color:var(--acc)!important}
+/* Price labels always sit on the same warm face as their dark ink. */
+html body[data-skin][data-size][data-theme] :is(.btn.price-coin,.coinpill,.shop-wallet,.lc-pill){background:#ffe4a8!important;color:#563317!important;border:1px solid #bd8c39!important;box-shadow:inset 0 1px #fff5d9,0 2px 0 #9b6b34!important;opacity:1!important;--key-face:#ffe4a8;--key-rim:#fff5d9;--key-edge:#9b6b34;--key-ink:#563317}
+html body[data-skin][data-size][data-theme] :is(.btn.price-coin,.coinpill,.shop-wallet,.lc-pill) :is(b,span){color:#563317!important;opacity:1!important}
+html body[data-skin="default"][data-size][data-theme] :is(.coinpill,.btn.price-coin){background:#fff0ca!important;color:#674217!important;border:1px solid #d6b977!important;box-shadow:0 1px 2px #402c1010!important;border-radius:10px!important}
+html body[data-skin][data-size][data-theme] :is(.shop-sub,.shop-bal-hint,.nfoot,.greet-date,.ngrp-n,.rpg-rarity,.rpg-merchant small){color:var(--muted-ink,var(--ink))!important;opacity:1!important;font-weight:500}
+html body[data-skin][data-size][data-theme] .shop-tx.tx-neon{color:var(--readable-ink,var(--ink))!important}
+html body[data-skin][data-size][data-theme] :is(.btn.price-coin,.coinpill,.shop-wallet,.lc-pill) .px-icon{width:24px;height:24px;flex-shrink:0}
+html body[data-skin="pixel-night"][data-size][data-theme][data-mode] :is(.shop-item,.ncard){background:var(--surf)!important;border:1px solid var(--line)!important;border-radius:8px!important}
+html body[data-skin="pixel-night"][data-size][data-theme] #bottomNav .bt:not(.active){color:#edf5ff!important;opacity:1!important}
+html body[data-skin="pixel-night"][data-size][data-theme] #bottomNav .bt.active{color:#263319!important;opacity:1!important}
+html body[data-skin="pixel-night"][data-size][data-theme] .shop-icon-preview{border-radius:6px}
+html body[data-skin="default"][data-size][data-theme] .shop-item{border-radius:14px!important}
+@media(max-width:620px){html body[data-skin][data-size][data-theme] .ncard{padding:14px!important}.ncard-head{gap:8px}html body[data-skin][data-size][data-theme] .ncard-head .ncard-acts{gap:4px}html body[data-skin][data-size][data-theme] .ncard .nsnip{margin-top:4px}}
+
+/* Quest creation follows the current skin's button face, radius and type. */
+html body[data-skin][data-size][data-theme] #composer[hidden]{display:none!important}
+html body[data-skin][data-size][data-theme] #quickFab{left:18px;right:auto;bottom:calc(18px + var(--nav-height,0px) + env(safe-area-inset-bottom));width:auto;height:52px;min-height:52px!important;padding:0 18px;gap:9px;border-radius:var(--r);font-family:var(--ui);font-weight:700;letter-spacing:0;line-height:1;box-shadow:0 4px 12px rgba(var(--ink-rgb),.16)}
+html body[data-skin][data-size][data-theme] #quickFab svg{width:22px;height:22px;flex:none;display:block}
+html body[data-skin][data-size][data-theme] .c-emoji{display:inline-flex;align-items:center;justify-content:center;padding:0!important;flex-shrink:0;align-self:center}
+html body[data-skin][data-size][data-theme] .c-emoji .px-label{display:inline-flex;justify-content:center;align-items:center;line-height:1!important;gap:0;width:100%;height:100%}
+html body[data-skin][data-size][data-theme] .c-emoji.empty .emoji-icon{font-size:20px!important}
+html body[data-skin][data-size][data-theme] .quest-order{display:flex;align-items:center;gap:10px;padding:12px;margin-bottom:16px;background:var(--surf2);border:1px solid var(--line);border-radius:var(--r)}
+.quest-order>div{flex:1;min-width:0}.quest-order label{display:block;margin:0 0 4px}.quest-order small{display:block;color:var(--muted-ink,var(--ink))}.quest-order input{width:70px;text-align:center}.quest-order>span{white-space:nowrap}
+html body[data-skin][data-size][data-theme] :is(#tidy,.socials .soc){display:inline-flex;align-items:center;justify-content:center;gap:8px}
+html body[data-skin][data-size][data-theme] :is(#tidy svg,.brand-logo){width:20px;height:20px;flex:none;display:block}
+html body[data-skin][data-size][data-theme] #setTabs .stab{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:10px 14px;white-space:nowrap}
+html body[data-skin][data-size][data-theme] #setTabs .stab>span{display:inline-flex;align-items:center;justify-content:center;flex:none}
+html body[data-icon-style="emoji"][data-size][data-theme] #setTabs .emoji-icon{width:20px;height:20px;font-size:18px!important}
+html body[data-skin][data-size][data-theme] .c-lab:has(.cdice){display:flex;align-items:center;justify-content:space-between;gap:12px}
+html body[data-skin][data-size][data-theme] .cdice{float:none;display:inline-flex;align-items:center;justify-content:center;padding:6px;flex:none;margin:0}
+
+/* Compact calendar lanes are deliberate exceptions to full-size button rules. */
+html body[data-skin][data-size][data-theme] button:is(.cxev,.cxmore,.cxadd){min-width:0!important;min-height:0!important;white-space:nowrap!important}
+html body[data-skin][data-size][data-theme] .cxev{min-width:0!important;min-height:0!important;height:24px!important;max-height:24px!important;padding:0 6px!important;margin:0 3px!important;border-radius:4px!important;font-size:11px!important;line-height:24px!important;box-shadow:none!important;overflow:hidden;gap:4px;transform:none!important}
+html body[data-skin][data-size][data-theme] .cxev *{font-size:11px!important;line-height:1.2!important;min-width:0}
+html body[data-skin][data-size][data-theme] .cxev .cxi{width:16px;height:16px;flex:none;display:inline-flex;align-items:center}
+html body[data-skin][data-size][data-theme] .cxev :is(.emoji-icon,.px-icon){width:16px!important;height:16px!important;font-size:14px!important}
+html body[data-skin][data-size][data-theme] .cxlanes{grid-auto-rows:26px;height:calc(var(--lanes,1) * 28px);gap:2px 0}
+html body[data-skin][data-size][data-theme] .cxmore{min-width:0!important;min-height:0!important;height:24px!important;padding:0 4px!important;font-size:11px!important;line-height:24px!important;box-shadow:none!important;white-space:nowrap;overflow:hidden}
+html body[data-skin][data-size][data-theme] .cxadd{min-width:0!important;min-height:0!important;width:22px!important;height:22px!important;padding:0!important}
+html body[data-skin][data-size][data-theme] .cxhead{min-width:0;overflow:hidden}
+html body[data-skin][data-size][data-theme] .cal-arrow{display:block;width:0;height:0;border-top:6px solid transparent;border-bottom:6px solid transparent}
+.cal-arrow.prev{border-right:9px solid currentColor}.cal-arrow.next{border-left:9px solid currentColor}
+html body[data-skin][data-size][data-theme] :is(#calPrev,#calNext){display:inline-flex;align-items:center;justify-content:center;padding:10px}
+
+html body[data-skin][data-size][data-theme] .pomo-sets{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;width:100%;padding:16px;margin-top:16px;border:1px solid var(--line);border-radius:var(--r);background:var(--surf2)}
+html body[data-skin][data-size][data-theme] .pomo-sets label{display:flex;flex-direction:column;align-items:stretch;justify-content:flex-start;gap:8px;white-space:normal;text-align:left;color:var(--muted-ink,var(--ink));letter-spacing:0;text-transform:none}
+html body[data-skin][data-size][data-theme] .pomo-sets input{width:100%;padding:10px 12px;text-align:left;background:var(--surf);border:1px solid var(--line);border-radius:var(--r)}
+html body[data-skin][data-size][data-theme] #pomoHint{text-align:center;max-width:100%;line-height:1.6!important;margin-top:12px}
+html body[data-skin][data-size][data-theme] #pomoBox{gap:12px}
+html body[data-skin][data-size][data-theme] #pomoBox .mrow{margin-bottom:0!important}
+html body[data-skin][data-size][data-theme] #pomoBox .pomo-sets{margin-top:0}
+html body[data-skin][data-size][data-theme] .lc-chest{width:150px;height:120px;perspective:450px}
+body.saver .lc-chest.shake,body[data-motion-enabled="false"] .lc-chest.shake{animation:none!important}
+/* Google Khmer fonts, including the language choice before switching languages. */
+html body[data-skin][data-size][data-theme] #langRow [data-lang="km"]{font-family:'Adit','Kantumruy Pro','Noto Sans Khmer',sans-serif!important;letter-spacing:normal!important;text-transform:none!important}
+html[lang="km"] body[data-skin][data-size][data-theme] :is(button,input,textarea,select,label,h1,h2,h3,.c-lab,.p-lab,.ttl,.hint,.set-name,.set-desc,.seg,.stab){font-family:var(--ui)!important;letter-spacing:normal!important;text-transform:none!important}
+@media(max-width:620px){html body[data-skin][data-size][data-theme] #quickFab{left:14px;height:48px;min-height:48px!important;padding:0 14px;bottom:calc(12px + var(--nav-height,64px) + env(safe-area-inset-bottom))}html body[data-skin][data-size][data-theme] #setTabs .stab{padding:9px 10px;gap:6px}html body[data-skin][data-size][data-theme] .cxev{padding:0 3px!important;margin:0 1px!important}html body[data-skin][data-size][data-theme] .pomo-sets{padding:12px;gap:12px}}
+
+/* Daily work: clear summaries and progressively disclosed controls. */
+html body[data-skin][data-size][data-theme] #greetBar{margin:0 0 18px;gap:8px;align-items:center}
+html body[data-skin][data-size][data-theme] #greetTime{display:none}
+html body[data-skin][data-size][data-theme] #greetBar .greet-clock{flex-basis:auto;margin-left:auto;display:block}
+html body[data-skin][data-size][data-theme] #greetHi{font-size:20px!important;line-height:1.4!important}
+html body[data-skin][data-size][data-theme] #questsHead{margin-top:12px;gap:8px;align-items:center}
+html body[data-skin][data-size][data-theme] #questsHead h2{font-size:18px!important}
+html body[data-skin][data-size][data-theme] #scopeRow{display:flex;flex-wrap:wrap;gap:6px;overflow:visible;white-space:normal;padding-bottom:0;margin-bottom:16px}
+html body[data-skin][data-size][data-theme] #scopeRow>.seg{flex:1;justify-content:center;padding:10px 12px;border-radius:var(--r)}
+html body[data-skin][data-size][data-theme] :is(.scope-more,.quest-options){position:relative;min-width:0}
+html body[data-skin][data-size][data-theme] :is(.scope-more,.quest-options)>summary{cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:center;min-height:44px;padding:10px 12px;font:600 12px/1.4 var(--ui);color:var(--muted-ink,var(--ink));border:1px solid var(--line);border-radius:var(--r);background:var(--surf)}
+html body[data-skin][data-size][data-theme] summary::-webkit-details-marker{display:none}
+.scope-more>summary::after,.quest-options>summary::after,#addOptions>summary::after{content:'⌄';margin-left:8px;font-weight:700}
+.scope-more[open]>summary::after,.quest-options[open]>summary::after,#addOptions[open]>summary::after{content:'⌃'}
+html body[data-skin][data-size][data-theme] :is(.scope-extras,.quest-options-body){display:flex;flex-wrap:wrap;gap:8px;position:absolute;right:0;top:calc(100% + 6px);z-index:60;width:min(340px,calc(100vw - 32px));padding:14px;background:var(--surf);color:var(--ink);border:1px solid var(--line);border-radius:var(--r);box-shadow:0 8px 24px #0002;max-height:60dvh;overflow:auto}
+html body[data-skin][data-size][data-theme] .scope-extras .seg{justify-content:flex-start;background:var(--surf2);padding:10px 12px}
+html body[data-skin][data-size][data-theme] .scope-more .selected{color:var(--ink);border-color:var(--ink)}
+html body[data-skin][data-size][data-theme] .scope-extras .tabsep{width:100%;height:1px;background:var(--line);margin:2px 0}
+html body[data-skin][data-size][data-theme] #scopeExtras .usertab{max-width:100%;flex-wrap:wrap}
+html body[data-skin][data-size][data-theme] #questsHead #calBtn{min-width:44px;padding:10px 12px!important}
+html body[data-skin][data-size][data-theme] .task.task-quiet{padding:14px!important;min-height:76px!important;gap:10px!important;grid-template-columns:44px minmax(0,1fr) auto!important;align-items:center;border-color:var(--line)!important;box-shadow:none!important}
+html body[data-skin][data-size][data-theme] .task.task-quiet>.tbody{grid-column:2!important;grid-row:1!important;width:100%;min-width:0}
+html body[data-skin][data-size][data-theme] .task.task-quiet>.check{grid-column:1!important;grid-row:1!important;align-self:center;margin:0}
+html body[data-skin][data-size][data-theme] .task.task-quiet>.acts{grid-column:3!important;grid-row:1!important;position:static!important;margin:0!important;align-self:center;display:flex!important;flex-direction:column;gap:4px!important;max-width:44px}
+html body[data-skin][data-size][data-theme] .task.task-quiet .tline{align-items:center;gap:8px}
+html body[data-skin][data-size][data-theme] .task-summary{gap:6px 12px!important;margin-top:5px!important;color:var(--muted-ink,var(--ink))}
+html body[data-skin][data-size][data-theme] .task-summary:empty{display:none}
+html body[data-skin][data-size][data-theme] .task-summary>span{font-size:12px!important;line-height:1.5!important}
+html body[data-skin][data-size][data-theme] .task-date.overdue{color:var(--danger);font-weight:600}
+html body[data-skin][data-size][data-theme][data-celebrations="false"] .task-quiet,html body[data-skin][data-size][data-theme][data-celebrations="false"] .task-quiet::before,html body[data-skin][data-size][data-theme][data-celebrations="false"] .task-quiet::after{animation:none!important}
+html body[data-skin][data-size][data-theme][data-celebrations="false"] .task-quiet::before,html body[data-skin][data-size][data-theme][data-celebrations="false"] .task-quiet::after{display:none!important}
+html body[data-skin][data-size][data-theme] #addModal .set-sec{display:flex;flex-direction:column;gap:16px;border:0;background:transparent;margin-top:0!important;padding:0!important}
+html body[data-skin][data-size][data-theme] #addModal .set-sec>.c-row1{order:1;margin:0}
+html body[data-skin][data-size][data-theme] #addModal .add-date{order:2;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+html body[data-skin][data-size][data-theme] #addModal .add-date label{margin:0;flex-basis:100%;letter-spacing:0;text-transform:none}
+html body[data-skin][data-size][data-theme] #addModal .add-date input{flex:1;min-width:0;width:100%}
+html body[data-skin][data-size][data-theme] #addOptions{order:3;border:1px solid var(--line);border-radius:var(--r);background:var(--surf2)}
+html body[data-skin][data-size][data-theme] #addOptions>summary{cursor:pointer;display:flex;align-items:center;justify-content:space-between;min-height:44px;padding:12px 14px;font-weight:600;list-style:none}
+html body[data-skin][data-size][data-theme] #addOptions .add-options-body{display:flex;flex-direction:column;gap:14px;padding:14px;border-top:1px solid var(--line)}
+html body[data-skin][data-size][data-theme] #addOptions .c-block{margin:0}
+html body[data-skin][data-size][data-theme] #addOptions .fmtbar{order:1;margin-top:0!important}
+html body[data-skin][data-size][data-theme] #addOptions #aDesc{order:2}
+html body[data-skin][data-size][data-theme] #addOptions .c-block{order:3}
+html body[data-skin][data-size][data-theme] #addOptions .p-row{order:4}
+html body[data-skin][data-size][data-theme] #addModal .add-submit{order:30;position:sticky;bottom:-16px;margin:0 -16px -16px;padding:14px 16px;background:var(--surf);border-top:1px solid var(--line);z-index:2}
+html body[data-skin][data-size][data-theme] #addModal .add-submit .btn{width:100%;justify-content:center}
+html body[data-skin][data-size][data-theme] .optional-games{margin:24px 0;padding:16px;border:1px solid var(--line);border-radius:var(--r);background:var(--surf)}
+.optional-games>summary{cursor:pointer;font-weight:600;min-height:44px;display:flex;align-items:center}
+html body[data-skin][data-size][data-theme] #questsHead{position:relative}
+html body[data-skin][data-size][data-theme] #questOptions{position:static}
+html body[data-skin][data-size][data-theme] :is(.scope-more,.quest-options):not([open])>div,html body[data-skin][data-size][data-theme] #addOptions:not([open])>.add-options-body{display:none!important}
+html body[data-skin][data-size][data-theme] #addModal #addOptions{display:block!important;order:3!important}
+html body[data-skin][data-size][data-theme] #addOptions .c-block:has(#aFx){display:none}
+html body[data-skin="default"][data-size][data-theme] #scene :is(.cols,.halftone),html body[data-skin="default"][data-size][data-theme] #grain{display:none}
+html body[data-skin][data-size][data-theme] :is(.scope-extras,.quest-options-body){background:var(--bg)!important;backdrop-filter:none}
+html body[data-skin="default"][data-size][data-theme] :is(#scopeRow .seg,#questsHead summary,#addOptions summary,.add-submit .btn){text-transform:none!important;letter-spacing:0}
+html body[data-skin="default"][data-size][data-theme] .task-quiet .check[aria-pressed="false"]{border-color:var(--muted-ink,var(--ink))!important;background:var(--surf)!important}
+html body[data-skin][data-size][data-theme] #addModal .sheet{display:flex;flex-direction:column;overflow:hidden!important}
+html body[data-skin][data-size][data-theme] #addModal .sheet-h{flex-shrink:0}
+html body[data-skin][data-size][data-theme] #addModal .set-sec{min-height:0;overflow:auto;flex:1 1 auto;padding-bottom:8px!important}
+html body[data-skin][data-size][data-theme] #addModal .add-submit{position:static;flex-shrink:0;margin:8px -16px -16px}
+html body[data-skin][data-size][data-theme] #addModal .add-date{order:2!important}
+html body[data-skin][data-size][data-theme] .task-summary .task-sticker :is(.emoji-icon,.px-icon){width:20px!important;height:20px!important;font-size:18px!important}
+html body[data-skin][data-size][data-theme] .scopewrap::after{display:none}
+/* Quest names follow App font in every style, including the expanded sheet. */
+html body[data-skin="pixel-night"][data-quest-font="classic"][data-size][data-theme][data-mode] :is(.ttl,#qvTtl){font-size:max(12px,calc(var(--type-title)*.75))!important;line-height:1.75!important;letter-spacing:0!important}
+html body[data-skin="pixel-night"][data-quest-font="classic"][data-size][data-theme][data-mode] :is(#qvTtl,#qeTitle,#aTitle){font-size:14px!important;line-height:1.7!important;letter-spacing:0!important}
+/* Classic's large display numerals are unsuitable for compact navigation. */
+html body:is([data-skin="pixel"],[data-skin="pixel-night"])[data-size][data-theme][data-mode] :is(#navRow .tab,#bottomNav .bt){font-family:var(--nav-font,var(--ui))!important;font-size:14px!important;font-weight:600;line-height:1.2!important;letter-spacing:.02em!important;color:var(--key-ink,var(--ink))!important}
+html body:is([data-skin="pixel"],[data-skin="pixel-night"])[data-size][data-theme][data-mode] :is(#navRow .tab,#bottomNav .bt) :is(.cnt,.px-label){font-family:inherit!important;font-size:inherit!important;font-weight:inherit!important;line-height:inherit!important;color:inherit!important;opacity:1!important;letter-spacing:inherit!important}
+html body:is([data-skin="pixel"],[data-skin="pixel-night"])[data-size][data-theme][data-mode] #navRow .tab{display:inline-flex;align-items:center;justify-content:center;gap:8px}
+html body[data-skin][data-size][data-theme][data-mode] :is(.ttl,.qv-ttl,#qvTtl,#qeTitle,#aTitle,#cTitle,.cxnm){font-family:var(--quest-font,var(--disp))!important}
+/* Native option menus need their own solid colors and matching OS scheme. */
+html body[data-skin][data-size][data-theme][data-mode="dark"] select{color-scheme:dark;--option-bg:#20242d;--option-ink:#f1f5f9}
+html body[data-skin][data-size][data-theme][data-mode="light"] select{color-scheme:light;--option-bg:#ffffff;--option-ink:#172033}
+html body[data-skin][data-size][data-theme] select option{background:var(--option-bg);color:var(--option-ink)}
+html body[data-skin][data-size][data-theme] select option:checked{background:var(--acc);color:var(--on-acc)}
+/* The complete Pixel Night shell shares the selected palette, in both modes. */
+html body[data-skin="pixel-night"][data-size][data-theme][data-mode]{--bg:var(--pn-void);--surf:var(--pn-indigo);--surf2:var(--pn-navy);--ink:var(--pn-moon);--muted:var(--pn-ice);--line:var(--pn-secondary);--panel-shadow:0 4px 18px rgba(var(--acc-rgb),.14);background:var(--bg)!important;color:var(--ink)!important}
+html body[data-skin="pixel-night"][data-size][data-theme][data-mode] :is(.btn,.hbt,.ibt,.seg,.tab,.bt,.stab,.vw,.md-toggle,.chip,.fchip,.c-emoji,.npin){--key-face:var(--surf2);--key-rim:var(--line);--key-edge:var(--pn-void);--key-ink:var(--ink);background:var(--key-face)!important;color:var(--key-ink)!important;border-color:var(--line)!important;opacity:1!important}
+html body[data-skin="pixel-night"][data-size][data-theme][data-mode] :is(#musicBtn,#setBtn,#sortBtn,#lootPreview,#cDice){--key-face:var(--surf2);--key-rim:var(--line);--key-edge:var(--pn-void);--key-ink:var(--ink)}
+html body[data-skin="pixel-night"][data-size][data-theme][data-mode] :is(.btn.acc,.seg.on,.tab.active,.bt.active,.stab.on,.vw.on,.chip.on,.fchip.on,.picker-tabs .on,.check.on){--key-face:var(--acc);--key-rim:var(--line);--key-edge:var(--pn-void);--key-ink:var(--on-acc);background:var(--acc)!important;color:var(--on-acc)!important;border-color:var(--acc)!important}
+html body[data-skin="pixel-night"][data-size][data-theme][data-mode] :is(.tab,.bt) .cnt{color:inherit!important;opacity:1!important}
+html body[data-skin="pixel-night"][data-size][data-theme][data-mode] :is(.task,.habit,.ncard,.shop-item,.pop,.sheet,.set-sec,.music-drop,.scope-extras,.quest-options-panel,.coinpill,.shop-wallet,.lc-pill,.btn.price-coin){background:var(--surf)!important;color:var(--ink)!important;border-color:var(--line)!important;box-shadow:var(--panel-shadow)!important}
+html body[data-skin="pixel-night"][data-size][data-theme][data-mode] :is(.coinpill,.shop-wallet,.lc-pill,.btn.price-coin) :is(b,span){color:var(--ink)!important}
+html body[data-skin="pixel-night"][data-size][data-theme][data-mode] #bottomNav .bt{color:var(--ink)!important}
+html body[data-skin="pixel-night"][data-size][data-theme][data-mode] #bottomNav .bt.active{color:var(--on-acc)!important}
+html body[data-skin="pixel-night"][data-size][data-theme][data-mode] :is(.greet-hi,.sec-h>h2,.sheet-h h2,.p-lab,.c-lab){background:var(--surf)!important;color:var(--ink)!important}
+html body[data-skin="pixel-night"][data-size][data-theme][data-mode] .modal{background:rgba(var(--ink-rgb),.2)!important}
+html body[data-skin="pixel-night"][data-size][data-theme][data-mode] #pn-background{background:linear-gradient(var(--pn-void),var(--pn-indigo),var(--pn-band),var(--pn-navy))}
+html body[data-skin="pixel-night"][data-size][data-theme][data-mode] #pn-background::after{background:radial-gradient(ellipse at 65% 30%,transparent 25%,rgba(var(--acc-rgb),.08))}
+html body[data-skin="pixel-night"][data-size][data-theme][data-mode] .icon-picker .emoji{background:var(--surf2)!important;border-color:var(--line)!important}
+html body[data-skin="pixel-night"][data-size][data-theme][data-mode] :is(.task,.ncard,.habit){border-color:var(--line)!important}
+html body[data-skin="pixel-night"][data-size][data-theme][data-mode] input[type="range"]{accent-color:var(--acc)}
+html body[data-skin="pixel-night"][data-size][data-theme][data-mode] select{--option-bg:var(--surf);--option-ink:var(--ink)}
+html body[data-skin="pixel-night"][data-size][data-theme][data-mode] :focus-visible{outline-color:var(--acc)!important}
+@media(max-width:620px){html body[data-skin][data-size][data-theme] #greetBar>div:first-child{flex:1 1 auto}html body[data-skin][data-size][data-theme] .scopewrap{position:relative}html body[data-skin][data-size][data-theme] .scope-more{position:static;flex:0 0 auto}html body[data-skin][data-size][data-theme] .scope-more>summary{min-height:44px;padding:10px 8px;border:1px solid var(--line);justify-content:center}html body[data-skin][data-size][data-theme] .scope-more:has(.selected){flex-basis:100%}html body[data-skin][data-size][data-theme] .scope-extras{left:0;right:auto}html body[data-skin][data-size][data-theme] #scopeRow>.seg{min-width:0!important}}
+@media(max-width:620px){html body[data-skin][data-size][data-theme] #scopeRow>.seg{padding:10px 8px;font-size:12px!important}html body[data-skin][data-size][data-theme] #greetHi{font-size:18px!important}html body[data-skin][data-size][data-theme] .task.task-quiet{padding:12px!important;gap:8px!important}}
